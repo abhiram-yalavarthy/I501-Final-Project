@@ -2,11 +2,10 @@ import os
 import pickle
 import pandas as pd
 import matplotlib.pyplot as plt
-import streamlit as st
-import matplotlib
-matplotlib.use('TkAgg')  
+import matplotlib 
 matplotlib.use('Agg')  
-import matplotlib.pyplot as plt
+import streamlit as st
+
 
 from dotenv import load_dotenv
 
