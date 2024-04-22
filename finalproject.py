@@ -66,7 +66,7 @@ filtered_df = df[df['Item'].isin(selected_items) & df['Year'].isin(selected_year
 # Check if filtered data is available
 if not filtered_df.empty:
     # Get production data
-    production_df = filtered_df[filtered_df['Item'] == 'Production']
+    production_df = filtered_df[filtered_df['Commodity'] == 'Production']
     
     # Check if production data is available
     if not production_df.empty:
