@@ -166,7 +166,6 @@ def arima_modeling(commodity_data):
         plot_pacf(commodity_data['PublishValue'], ax=ax_pacf)
         st.pyplot(fig_pacf)
 
-
         # Train-test split
         train_size = int(len(commodity_data) * 0.8)
         train_data, test_data = commodity_data[:train_size], commodity_data[train_size:]
