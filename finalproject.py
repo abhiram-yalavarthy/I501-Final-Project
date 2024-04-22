@@ -6,7 +6,7 @@ import matplotlib
 matplotlib.use('Agg')  
 import streamlit as st
 
-from sklearn.metrics import mean_squared_error
+
 
 from dotenv import load_dotenv
 from utils.b2 import B2
