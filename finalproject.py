@@ -54,8 +54,8 @@ import plotly.express as px
 df = get_data()
 
 # Get unique items and years
-sorted_items = sorted(df['Item'].unique())
-selected_items = st.sidebar.multiselect('Select Item', sorted_items, sorted_items)
+sorted_items = sorted(df['Commodity'].unique())
+selected_items = st.sidebar.multiselect('Select Commodity', sorted_items, sorted_items)
 
 sorted_years = sorted(df['Year'].unique())
 selected_years = st.sidebar.multiselect('Select Year', sorted_years, sorted_years)
