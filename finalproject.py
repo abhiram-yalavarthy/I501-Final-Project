@@ -59,8 +59,8 @@ selected_items = st.sidebar.multiselect('Select Commodity', sorted_items, sorted
 
 
 
-sorted_countries = sorted(df['Country'].unique())
-selected_countries = st.sidebar.multiselect('Select Country', sorted_countries, sorted_countries)
+sorted_countries = sorted(df['Location'].unique())
+selected_countries = st.sidebar.multiselect('Select Location', sorted_countries, sorted_countries)
 
 
 
@@ -71,11 +71,11 @@ filtered_df = df[df['Item'].isin(selected_items) & df['Year'].isin(selected_year
 
 
 # Pivot the dataframe to create a matrix of production values
-pivot_table = country_commodity_production.pivot(index='Country', columns='Commodity', values='PublishValue')
+pivot_table = country_commodity_production.pivot(index='Location', columns='Commodity', values='PublishValue')
 
 # Create a heatmap
 fig = px.imshow(pivot_table, 
-                labels=dict(x="Commodity", y="Country", color="PublishValue"),
+                labels=dict(x="Commodity", y="Location", color="PublishValue"),
                 x=pivot_table.columns,
                 y=pivot_table.index,
                 color_continuous_scale='YlOrRd')  # Choose color scale
