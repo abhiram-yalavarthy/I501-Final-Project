@@ -53,36 +53,7 @@ import plotly.express as px
 # Get the data
 df = get_data()
 
-# Get unique Commodities and Country
-sorted_items = sorted(df['Commodity'].unique())
-selected_items = st.sidebar.multiselect('Select Commodity', sorted_items, sorted_items)
 
-sorted_locations = sorted(df['Location'].unique())
-selected_locations = st.sidebar.multiselect('Select Location', sorted_locations, sorted_locations)
-
-# Filter data based on selected items and locations
-filtered_df = df[df['Commodity'].isin(selected_items) & df['Location'].isin(selected_locations)]
-
-# Group by location and commodity and sum the production values
-location_commodity_production = filtered_df.groupby(['Location', 'Commodity'])['PublishValue'].sum().reset_index()
-
-# Pivot the dataframe to create a matrix of production values
-pivot_table = location_commodity_production.pivot(index='Location', columns='Commodity', values='PublishValue')
-
-# Create a heatmap
-fig = px.imshow(pivot_table, 
-                labels=dict(x="Commodity", y="Location", color="PublishValue"),
-                x=pivot_table.columns,
-                y=pivot_table.index,
-                color_continuous_scale='YlOrRd')  # Choose color scale
-
-# Update layout to adjust figure size and axis labels
-fig.update_layout(title='Commodity Production Across Locations',
-                  xaxis_title='Commodity',
-                  yaxis_title='Location')
-
-# Display the plot
-st.plotly_chart(fig)
 
 import streamlit as st
 import pandas as pd
