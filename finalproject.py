@@ -6,7 +6,7 @@ import matplotlib
 matplotlib.use('Agg')  
 import streamlit as st
 
-
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 from dotenv import load_dotenv
 from utils.b2 import B2
