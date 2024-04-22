@@ -66,8 +66,6 @@ selected_countries = st.sidebar.multiselect('Select Location', sorted_countries,
 
 
 
-# Filter data based on selected items and years
-filtered_df = df[df['Item'].isin(selected_items) & df['Year'].isin(selected_years)]
 
 
 # Pivot the dataframe to create a matrix of production values
