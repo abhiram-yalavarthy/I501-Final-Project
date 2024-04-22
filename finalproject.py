@@ -53,32 +53,40 @@ import plotly.express as px
 # Get the data
 df = get_data()
 
-# Get unique items and years
+# Get unique Commodities and Country
 sorted_items = sorted(df['Commodity'].unique())
 selected_items = st.sidebar.multiselect('Select Commodity', sorted_items, sorted_items)
 
-sorted_years = sorted(df['Year'].unique())
-selected_years = st.sidebar.multiselect('Select Year', sorted_years, sorted_years)
+
+
+sorted_countries = sorted(df['Country'].unique())
+selected_countries = st.sidebar.multiselect('Select Country', sorted_countries, sorted_countries)
+
+
+
+
 
 # Filter data based on selected items and years
 filtered_df = df[df['Item'].isin(selected_items) & df['Year'].isin(selected_years)]
 
-# Check if filtered data is available
-if not filtered_df.empty:
-    # Get production data
-    production_df = filtered_df[filtered_df['Commodity'] == 'Production']
-    
-    # Check if production data is available
-    if not production_df.empty:
-        # Create an interactive line plot using Plotly
-        fig = px.line(production_df, x='Year', y='PublishValue', title='Production Over Time')
-        
-        # Display the plot in Streamlit
-        st.plotly_chart(fig)
-    else:
-        st.write("No production data available for the selected items and years.")
-else:
-    st.write("No data available for the selected items and years.")
+
+# Pivot the dataframe to create a matrix of production values
+pivot_table = country_commodity_production.pivot(index='Country', columns='Commodity', values='PublishValue')
+
+# Create a heatmap
+fig = px.imshow(pivot_table, 
+                labels=dict(x="Commodity", y="Country", color="PublishValue"),
+                x=pivot_table.columns,
+                y=pivot_table.index,
+                color_continuous_scale='YlOrRd')  # Choose color scale
+
+# Update layout to adjust figure size and axis labels
+fig.update_layout(title='Commodity Production Across Countries',
+                  xaxis_title='Commodity',
+                  yaxis_title='Country')
+
+# Display the interactive heatmap
+st.plotly_chart(fig)
 
 import streamlit as st
 import pandas as pd
