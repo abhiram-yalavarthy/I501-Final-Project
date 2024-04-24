@@ -273,4 +273,4 @@ st.write("R-squared Score:", r2)
 
 # Link to github
 st.markdown("[GitHub Repository](https://github.com/abhiram-yalavarthy/I501-Final-Project)")
-st.image("https://raw.githubusercontent.com/abhiram-yalavarthy/I501-Final-Project/main/pulses%20image.jpg", use_column_width=True)
+st.sidebar.image("https://raw.githubusercontent.com/abhiram-yalavarthy/I501-Final-Project/main/pulses.jpg", use_column_width=True)
