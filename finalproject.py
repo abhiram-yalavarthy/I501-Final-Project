@@ -31,7 +31,7 @@ def get_data():
     return df
 
 st.write("""
-## Vegatables and Pulses forecast APP
+## Vegatables and Pulses forecast App
          
 Shown are the price and production forecast
 
