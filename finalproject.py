@@ -29,7 +29,8 @@ def get_data():
     b2.set_bucket(os.environ['B2_BUCKETNAME'])
     df = b2.get_df(REMOTE_DATA)
     return df
-st.image("https://github.com/abhiram-yalavarthy/I501-Final-Project/blob/main/veg%20image.jpg", use_column_width=True)   
+st.image("https://raw.githubusercontent.com/abhiram-yalavarthy/I501-Final-Project/main/veg%20image.jpg", use_column_width=True)
+ 
 st.write("""
 ## Vegatables and Pulses forecast App
          
