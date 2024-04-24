@@ -270,3 +270,6 @@ st.title("Regression Model Results")
 st.write("Mean Squared Error:", mse)
 st.write("R-squared Score:", r2)
 
+# Link to github
+st.markdown("[GitHub Repository](https://github.com/abhiram-yalavarthy/I501-Final-Project)")
+
