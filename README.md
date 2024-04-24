@@ -1,4 +1,4 @@
-**ABSTRACT:**
+##ABSTRACT
 The abstract focuses on analyzing the trends and patterns in the production, supply, and availability of vegetables and pulses for the year 2023. The dataset provides comprehensive information on various aspects such as domestic availability, total supply, per capita availability, production, imports, and prices of vegetables and pulses.
 
 Key insights from the analysis include:
