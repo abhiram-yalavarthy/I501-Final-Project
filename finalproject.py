@@ -7,7 +7,6 @@ matplotlib.use('Agg')
 import streamlit as st
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
 from dotenv import load_dotenv
 from utils.b2 import B2
 from utils.modeling import *
@@ -54,6 +53,10 @@ import plotly.express as px
 df = get_data()
 
 
+
+
+
+# Display the interactive heatmap
 
 import streamlit as st
 import pandas as pd
@@ -166,6 +169,7 @@ def arima_modeling(commodity_data):
         plot_pacf(commodity_data['PublishValue'], ax=ax_pacf)
         st.pyplot(fig_pacf)
 
+
         # Train-test split
         train_size = int(len(commodity_data) * 0.8)
         train_data, test_data = commodity_data[:train_size], commodity_data[train_size:]
@@ -221,4 +225,47 @@ elif visualization_type == 'Partial Autocorrelation Plot':
     st.write("Partial Autocorrelation Plot for", selected_commodity)
     plot_pacf(selected_commodity_data['PublishValue'])
     st.pyplot()
+
+#Regression Analysis
+
+
+
+
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+
+df_encoded = pd.get_dummies(df, columns=['Location'])
+
+data = df
+
+# Sidebar
+st.sidebar.title("Model Options")
+selected_features = st.sidebar.multiselect("Select features:", data.columns)
+
+# Perform one-hot encoding
+df_encoded = pd.get_dummies(df, columns=['Decade', 'Item', 'Commodity', 'EndUse', 'Unit', 'Category', 'GeographicalLevel', 'Location'])
+
+# Separate features and target variable
+X = df_encoded.drop(columns=['PublishValue'])
+y = df_encoded['PublishValue']
+
+# Train-test split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Build the regression model
+model = LinearRegression()
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Evaluation metrics
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+# Display results
+st.title("Regression Model Results")
+st.write("Mean Squared Error:", mse)
+st.write("R-squared Score:", r2)
 
