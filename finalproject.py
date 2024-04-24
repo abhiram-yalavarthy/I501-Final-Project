@@ -29,7 +29,7 @@ def get_data():
     b2.set_bucket(os.environ['B2_BUCKETNAME'])
     df = b2.get_df(REMOTE_DATA)
     return df
-
+st.image("C:\\Users\\abhir\\Downloads\\veg image.jpg", use_column_width=True)   
 st.write("""
 ## Vegatables and Pulses forecast App
          
