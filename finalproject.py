@@ -160,14 +160,7 @@ def arima_modeling(commodity_data):
         ax.set_title('Time Series Plot for {}'.format(commodity_data['Commodity'].iloc[0]))
         st.pyplot(fig)
 
-        # Check ACF and PACF plots
-        fig_acf, ax_acf = plt.subplots()
-        plot_acf(commodity_data['PublishValue'], ax=ax_acf)
-        st.pyplot(fig_acf)
-
-        fig_pacf, ax_pacf = plt.subplots()
-        plot_pacf(commodity_data['PublishValue'], ax=ax_pacf)
-        st.pyplot(fig_pacf)
+        
 
 
         # Train-test split
@@ -200,6 +193,14 @@ def arima_modeling(commodity_data):
 
     except KeyError as e:
         st.write("KeyError:", e)
+            # Check ACF and PACF plots
+        fig_acf, ax_acf = plt.subplots()
+        plot_acf(commodity_data['PublishValue'], ax=ax_acf)
+        st.pyplot(fig_acf)
+
+        fig_pacf, ax_pacf = plt.subplots()
+        plot_pacf(commodity_data['PublishValue'], ax=ax_pacf)
+        st.pyplot(fig_pacf)
 
 # Load data
 data = df
