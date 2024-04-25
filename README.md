@@ -18,14 +18,23 @@ Through this analysis, stakeholders can gain a comprehensive understanding of th
 
 <H2>Data Description</H2>
 Decade: Categorization of the decade to which the data belongs.
+
 Year: The year to which the data pertains, in this case, 2023.
+
 Item: The specific item or commodity being analyzed, such as different types of vegetables and pulses.
+
 Commodity: Further classification of the item, providing additional details about its type or variety.
+
 EndUse: Description of the end use or purpose of the commodity, which may include consumption, processing, or other applications.
+
 PublishValue: Numerical value associated with the particular aspect of the commodity being measured, such as availability, production, or price.
+
 Unit: Unit of measurement for the PublishValue, indicating whether it is measured in pounds, dollars, or other relevant units.
+
 Category: Categorization of the data based on its nature or aspect, such as availability, supply, or price.
+
 GeographicalLevel: The geographical level at which the data is reported, which may include country-level or regional-level data.
+
 Location: Specific location or region to which the data pertains, providing insights into regional variations in production, supply, and prices.
 
 <H2>Algorithm Description</H2>
