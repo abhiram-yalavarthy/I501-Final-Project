@@ -1,13 +1,18 @@
 <H2>ABSTRACT</H2>
-The abstract focuses on analyzing the trends and patterns in the production, supply, and availability of vegetables and pulses for the year 2023. The dataset provides comprehensive information on various aspects such as domestic availability, total supply, per capita availability, production, imports, and prices of vegetables and pulses.
+The abstract focuses on analyzing the trends and patterns in the production, supply, and availability of vegetables and pulses for the year 2023. 
+The dataset provides comprehensive information on various aspects such as domestic availability, total supply, per capita availability, production, imports, and prices of vegetables and pulses.
 
 Key insights from the analysis include:
 
 Production Trends: Analysis reveals the overall production trends of vegetables and pulses in 2023, highlighting any significant changes compared to previous years.
 Supply and Availability: The study examines the total supply and domestic availability of vegetables and pulses, shedding light on the factors influencing their availability in the market.
+
 Per Capita Consumption: Per capita availability data offers insights into the consumption patterns of vegetables and pulses among the population, providing valuable information for policymakers and stakeholders.
+
 Price Dynamics: Analysis of current and constant price data helps understand the pricing dynamics of vegetables and pulses throughout the year, identifying any notable fluctuations or trends.
+
 Geographical Patterns: The dataset provides information on geographical variations in production, supply, and prices, allowing for a regional-level analysis of vegetable and pulse markets.
+
 Through this analysis, stakeholders can gain a comprehensive understanding of the vegetable and pulse market dynamics in 2023, enabling informed decision-making and policy formulation to support the agricultural sector and ensure food security.
 
 
@@ -27,13 +32,17 @@ Location: Specific location or region to which the data pertains, providing insi
 ARIMA, which stands for Autoregressive Integrated Moving Average, is a popular and powerful time series forecasting model. It's a combination of three components: Autoregression (AR), Integration (I), and Moving Average (MA). Here's a brief overview of each component:
 
 Autoregression (AR): This component represents the relationship between the current observation in a time series and its previous observations, also known as lagged values. It assumes that the value of the time series at any given point is a linear combination of its past values.
+
 Integration (I): This component represents the differencing of raw observations to make the time series stationary. Stationarity is a desirable property in time series analysis because it simplifies the modeling process and makes the underlying patterns more apparent.
+
 Moving Average (MA): This component represents the relationship between the current observation and a residual error from a moving average model applied to lagged observations.
+
 The ARIMA model is specified by three main parameters: p, d, and q, which correspond to the order of the AR, I, and MA components, respectively.
 
 Now, let's discuss how ARIMA can be applied to the provided data:
 
 Identifying Stationarity: Before applying ARIMA, it's essential to check if the time series data is stationary. Stationarity can be assessed using statistical tests or by visual inspection of the data's mean and variance over time. If the data is not stationary, differencing may be applied to make it stationary.
+
 Choosing Parameters: The next step involves selecting appropriate values for the ARIMA parameters (p, d, q). This can be done using techniques like autocorrelation plots, partial autocorrelation plots, and grid search.
 Fitting the ARIMA Model: Once the parameters are determined, the ARIMA model is fitted to the data using historical observations. This involves estimating the coefficients of the autoregressive, differencing, and moving average terms.
 Model Evaluation: After fitting the model, it's crucial to evaluate its performance. This can be done by comparing the model's predictions to the actual values using metrics such as Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and visual inspection of the forecasted values against the observed values.
