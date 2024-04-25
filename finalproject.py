@@ -29,7 +29,7 @@ def get_data():
     b2.set_bucket(os.environ['B2_BUCKETNAME'])
     df = b2.get_df(REMOTE_DATA)
     return df
-st.image("C:\\Users\\abhir\\Downloads\\veg image.jpg", use_column_width=True)  
+st.image("https://github.com/abhiram-yalavarthy/I501-Final-Project/raw/main/veg%20image.jpg", use_column_width=True) 
 st.write("This App can be used in analytics to optimize crop yields, predict demand,and plan cultivation strategies based on market trends and consumer preferences . The usage of App requires prior knowledge in Statistics") 
 st.write("""
 ## Vegatables and Pulses forecast APP
@@ -275,7 +275,7 @@ st.write("R-squared Score:", r2)
 
 
 
-st.sidebar.image("C:\\Users\\abhir\\Downloads\\pulses.jpg", width=300)
+st.image("https://github.com/abhiram-yalavarthy/I501-Final-Project/raw/main/pulses.jpg", use_column_width=300)
 
 
 
