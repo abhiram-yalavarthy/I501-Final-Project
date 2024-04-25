@@ -49,10 +49,14 @@ Model Evaluation: After fitting the model, it's crucial to evaluate its performa
 Forecasting: Once the model is evaluated and deemed satisfactory, it can be used to make future predictions. Forecasting involves generating predictions for future time points based on the fitted ARIMA model.
 
 <H2>Regression Model</H2>
+
 A regression model is a statistical method used to investigate the relationship between a dependent variable (also known as the target or response variable) and one or more independent variables (also known as predictors or features). The goal of a regression model is to understand how the independent variables influence the dependent variable and to make predictions based on this relationship.
 
+
 Data Collection: Gather data on the variables of interest. This data should include values for both the dependent and independent variables.
+
 Data Preprocessing: Clean the data by handling missing values, outliers, and other anomalies. This may involve imputation, transformation, or removal of problematic data points.
+
 
 Feature Selection: Choose which independent variables to include in the model based on their relevance and importance to the dependent variable. This step may involve exploratory data analysis and statistical tests.
 
