@@ -11,7 +11,7 @@ Geographical Patterns: The dataset provides information on geographical variatio
 Through this analysis, stakeholders can gain a comprehensive understanding of the vegetable and pulse market dynamics in 2023, enabling informed decision-making and policy formulation to support the agricultural sector and ensure food security.
 
 
-**Data Description:**
+<H2>Data Description</H2>
 Decade: Categorization of the decade to which the data belongs.
 Year: The year to which the data pertains, in this case, 2023.
 Item: The specific item or commodity being analyzed, such as different types of vegetables and pulses.
@@ -23,7 +23,7 @@ Category: Categorization of the data based on its nature or aspect, such as avai
 GeographicalLevel: The geographical level at which the data is reported, which may include country-level or regional-level data.
 Location: Specific location or region to which the data pertains, providing insights into regional variations in production, supply, and prices.
 
-**Algorithm Description:**
+<H2>Algorithm Description</H2>
 ARIMA, which stands for Autoregressive Integrated Moving Average, is a popular and powerful time series forecasting model. It's a combination of three components: Autoregression (AR), Integration (I), and Moving Average (MA). Here's a brief overview of each component:
 
 Autoregression (AR): This component represents the relationship between the current observation in a time series and its previous observations, also known as lagged values. It assumes that the value of the time series at any given point is a linear combination of its past values.
@@ -39,7 +39,7 @@ Fitting the ARIMA Model: Once the parameters are determined, the ARIMA model is 
 Model Evaluation: After fitting the model, it's crucial to evaluate its performance. This can be done by comparing the model's predictions to the actual values using metrics such as Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and visual inspection of the forecasted values against the observed values.
 Forecasting: Once the model is evaluated and deemed satisfactory, it can be used to make future predictions. Forecasting involves generating predictions for future time points based on the fitted ARIMA model.
 
-**Regression Model:**
+<H2>Regression Model</H2>
 A regression model is a statistical method used to investigate the relationship between a dependent variable (also known as the target or response variable) and one or more independent variables (also known as predictors or features). The goal of a regression model is to understand how the independent variables influence the dependent variable and to make predictions based on this relationship.
 Data Collection: Gather data on the variables of interest. This data should include values for both the dependent and independent variables.
 Data Preprocessing: Clean the data by handling missing values, outliers, and other anomalies. This may involve imputation, transformation, or removal of problematic data points.
@@ -55,12 +55,12 @@ Demand Analysis: Regression analysis can help understand the factors influencing
 Production Forecasting: Regression models can forecast the production of vegetables and pulses based on factors like weather conditions, agricultural practices, and input costs. Accurate production forecasts can assist farmers in planning planting schedules, managing resources efficiently, and optimizing crop yields.
 
 
-**Tools Used**. 
+<H2>Tools Used</H2> 
 1)Visual Studio
 2)Streamlit
 
 
-**Ethical Concerns**. 
+<H2>Ethical Concerns</H2> 
 Fairness and Bias: Forecasting models may inadvertently perpetuate or exacerbate existing biases in the data, leading to unfair outcomes for certain groups or communities. To mitigate this risk, it's essential to implement fairness-aware algorithms that detect and mitigate biases. Additionally, conducting regular audits and sensitivity analyses can help identify and address biases in the model.
 Privacy and Data Protection: Time series data often contain sensitive information about individuals or organizations. Risks related to data privacy and security must be carefully managed through robust encryption, anonymization techniques, and compliance with relevant regulations such as GDPR or HIPAA. Implementing strict access controls and data governance policies can further protect against unauthorized access or misuse of data.
 Transparency and Accountability: Ensure transparency in the forecasting process by documenting model assumptions, methodologies, and limitations. Providing stakeholders with clear explanations of how forecasts are generated fosters trust and accountability. Open-sourcing code and making model documentation publicly available can also promote transparency and facilitate independent verification of results.
