@@ -84,8 +84,6 @@ Price Prediction: A regression model can be used to predict the prices of vegeta
 
 Demand Analysis: Regression analysis can help understand the factors influencing the demand for vegetables and pulses, such as population growth, income levels, dietary preferences, and consumer trends. By identifying key drivers of demand, stakeholders can tailor marketing strategies and optimize production to meet consumer needs effectively.
 
-Production Forecasting: Regression models can forecast the production of vegetables and pulses based on factors like weather conditions, agricultural practices, and input costs. Accurate production forecasts can assist farmers in planning planting schedules, managing resources efficiently, and optimizing crop yields.
-
 
 <H2>Tools Used</H2> 
 1)Visual Studio
