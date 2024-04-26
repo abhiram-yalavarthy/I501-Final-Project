@@ -54,7 +54,9 @@ Now, let's discuss how ARIMA can be applied to the provided data:
 Identifying Stationarity: Before applying ARIMA, it's essential to check if the time series data is stationary. Stationarity can be assessed using statistical tests or by visual inspection of the data's mean and variance over time. If the data is not stationary, differencing may be applied to make it stationary.
 
 Choosing Parameters: The next step involves selecting appropriate values for the ARIMA parameters (p, d, q). This can be done using techniques like autocorrelation plots, partial autocorrelation plots, and grid search.
+
 Fitting the ARIMA Model: Once the parameters are determined, the ARIMA model is fitted to the data using historical observations. This involves estimating the coefficients of the autoregressive, differencing, and moving average terms.
+
 Model Evaluation: After fitting the model, it's crucial to evaluate its performance. This can be done by comparing the model's predictions to the actual values using metrics such as Mean Squared Error (MSE), Root Mean Squared Error (RMSE), and visual inspection of the forecasted values against the observed values.
 Forecasting: Once the model is evaluated and deemed satisfactory, it can be used to make future predictions. Forecasting involves generating predictions for future time points based on the fitted ARIMA model.
 
